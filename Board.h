@@ -68,14 +68,12 @@ public:
 
 	Board& operator=(const Board& other);
 
-	string print() const;
 
 
 };
 
-ostream& operator<<(ostream& outs,string& s);
 
-ostream& operator<<(ostream& outs, Board& bd);
+ostream& operator<< (ostream& os, const Board& b);
 
 
 
