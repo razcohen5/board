@@ -118,16 +118,27 @@ using namespace std;
 		b=t;
 	}
 
+	string Board :: print()
+	{
+		string s = "";
+		for(int i=0;i<size;i++)
+		{
+			for(int j=0;j<size;j++)
+				s = s + b[i][j] + " ";
+			s += '\n';
+		}
+		return s;
+	}
+
+
+ostream& operator<<(ostream& outs,string& s)
+{
+	return cout << s;
+}
 
 ostream& operator<<(ostream& outs, Board& bd) 
 {
-	for(int i=0;i<bd.size;i++)
-		{
-		for(int j=0;j<bd.size;j++)
-			outs<<bd.b[i][j];
-		outs<<endl;
-		}
-	return outs;
+	return cout << bd.print();
 }
 
 
