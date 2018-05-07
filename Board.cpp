@@ -26,7 +26,9 @@ using namespace std;
 
 	bool Bridge :: operator==(char c) const
 	{
-		return bp->b[i][j]==c;
+		bool check = bp->b[i][j]==c;
+		delete[] this;
+		return check;
 	}
 
 	IllegalCharException :: IllegalCharException(char a)
