@@ -23,7 +23,7 @@ using namespace std;
 		bp->b[i][j] = c;
 	}
 
-	int Bridge :: operator==(char c)
+	bool Bridge :: operator==(char c) const
 	{
 		return bp->b[i][j]==c;
 	}

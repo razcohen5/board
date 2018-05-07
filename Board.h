@@ -18,7 +18,7 @@ public:
 
 	void operator=(char c);
 
-	int operator==(char c);
+	bool operator==(char c) const;
 
 };
 
