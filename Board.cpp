@@ -1,7 +1,7 @@
 #include <iostream>
 #include <string>
 #include <exception>
-#include "board.h"
+#include "Board.h"
 using namespace std;
 
 
