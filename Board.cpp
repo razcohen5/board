@@ -123,7 +123,11 @@ using namespace std;
 		b=t;
 	}
 
-
+	Board :: ~Board()
+	{
+		deleteBoard();
+	}
+	
 ostream& operator<< (ostream& os, const Board& b){
     int i, j;
     for(i = 0; i < b.size; i++){

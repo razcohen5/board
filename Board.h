@@ -70,7 +70,7 @@ public:
 
 	Board& operator=(const Board& other);
 
-
+	~Board();
 
 };
 
