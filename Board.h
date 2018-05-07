@@ -68,7 +68,7 @@ public:
 
 	Board& operator=(const Board& other);
 
-	string print();
+	string print() const;
 
 
 };
