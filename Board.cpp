@@ -80,9 +80,11 @@ using namespace std;
 
 	Bridge& Board :: operator[](pair<int,int> p)
 	{
+		Bridge *brp = nullptr;
 		if(p.first<0||p.second<0||p.first>=size||p.second>=size)
 			throw IllegalCoordinateException(p.first,p.second);
-		Bridge *brp = new Bridge(this,p.first,p.second);
+		else
+			brp = new Bridge(this,p.first,p.second);
 		return *brp;
 	}
 
