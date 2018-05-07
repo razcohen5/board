@@ -119,15 +119,13 @@ using namespace std;
 	}
 
 
-
-
 ostream& operator<<(ostream& outs, Board& bd) 
 {
 	for(int i=0;i<bd.size;i++)
 		{
 		for(int j=0;j<bd.size;j++)
 			outs<<bd.b[i][j];
-			outs<<endl;
+		outs<<endl;
 		}
 	return outs;
 }
