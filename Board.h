@@ -18,6 +18,8 @@ public:
 
 	void operator=(char c);
 
+	int operator==(char c);
+
 };
 
 class IllegalCharException : public exception 

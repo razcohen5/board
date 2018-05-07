@@ -23,6 +23,10 @@ using namespace std;
 		bp->b[i][j] = c;
 	}
 
+	int Bridge :: operator==(char c)
+	{
+		return bp->b[i][j]==c;
+	}
 
 	IllegalCharException :: IllegalCharException(char a)
 	{
