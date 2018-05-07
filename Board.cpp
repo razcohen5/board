@@ -21,6 +21,7 @@ using namespace std;
 			throw *i;
 		}
 		bp->b[i][j] = c;
+		delete[] this;
 	}
 
 	bool Bridge :: operator==(char c) const
