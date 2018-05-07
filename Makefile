@@ -1,4 +1,4 @@
-CCX=g++ -std=c++11
+CCX=gcc -std=c++11
 
 a.out: Board.o
 		$(CCX) main.cpp *.o
