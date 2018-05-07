@@ -16,10 +16,7 @@ using namespace std;
 	void Bridge :: operator=(char c)
 	{
 		if(c!='X'&&c!='O'&&c!='.')
-		{
-			const IllegalCharException *i = new IllegalCharException(c);
-			throw *i;
-		}
+			throw IllegalCharException(c);
 		bp->b[i][j] = c;
 		delete[] this;
 	}
@@ -84,10 +81,7 @@ using namespace std;
 	Bridge& Board :: operator[](pair<int,int> p)
 	{
 		if(p.first<0||p.second<0||p.first>=size||p.second>=size)
-		{
-			const IllegalCoordinateException *i = new IllegalCoordinateException(p.first,p.second);
-			throw *i;
-		}	
+			throw IllegalCoordinateException(p.first,p.second);
 		Bridge *brp = new Bridge(this,p.first,p.second);
 		return *brp;
 	}
@@ -95,10 +89,7 @@ using namespace std;
 	void Board :: operator=(char c)
 	{
 		if(c!='X'&&c!='O'&&c!='.')
-		{
-			const IllegalCharException *i = new IllegalCharException(c);
-			throw *i;
-		}
+			throw IllegalCharException(c);
 		for(int i=0;i<size;i++)
 			for(int j=0;j<size;j++)
 				b[i][j] = c;
