@@ -136,7 +136,7 @@ ostream& operator<<(ostream& outs,string& s)
 	return cout << s;
 }
 
-ostream& operator<<(ostream& outs, Board& bd) 
+ostream& operator<<(ostream& outs, const Board& bd) 
 {
 	return cout << bd.print();
 }
