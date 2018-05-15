@@ -2,6 +2,7 @@
 #include <string>
 #include <exception>
 using namespace std;
+class Coordinate;
 class Bridge;
 class IllegalCharException;
 class IllegalCoordinateException;
@@ -60,7 +61,7 @@ public:
 	Board(const Board& other);
 
 
-	Bridge& operator[](pair<int,int> p);
+	Bridge& operator[](const Coordinate& c);
 
 
 	void operator=(char c);
@@ -74,10 +75,15 @@ public:
 
 };
 
+class Coordinate{
+public:
+    int row,col;
+
+    Coordinate(int a,int b);
+
+
+};
+
+
 
 ostream& operator<< (ostream& os, const Board& b);
-
-
-
-
-
