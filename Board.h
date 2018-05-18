@@ -15,7 +15,9 @@ public:
 	int i;
 	int j;
 	
-	Bridge(Board *p,int a,int b);
+	Bridge(Board *p,const int a,const int b);
+
+	Bridge(const Bridge& other);
 
 	void operator=(char c);
 
@@ -61,7 +63,7 @@ public:
 	Board(const Board& other);
 
 
-	Bridge& operator[](const Coordinate& c);
+	Bridge operator[](const Coordinate& c);
 
 
 	void operator=(char c);
